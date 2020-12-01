@@ -9,11 +9,14 @@ app.use(bodyParser.urlencoded({
   extended: true
 }));
 
-const AllPhones = [
-   'hello'
-]
+const obj= require('./AllPhones')
+    
 app.get('/', (req, res) => {
-    res.send('My phones')
+        res.send("All Phones App")
+    });
+
+app.get('/phones', (req, res) => {
+    res.send(obj)
 });
 
 
