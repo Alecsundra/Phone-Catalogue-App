@@ -4,6 +4,8 @@ const port = process.env.PORT || 8000;
 const bodyParser = require('body-parser');
 // Support JSON-encoded bodies
 app.use(bodyParser.json());
+var cors = require('cors')
+app.use(cors())
 // Support URL-encoded bodies
 app.use(bodyParser.urlencoded({
   extended: true
@@ -12,10 +14,10 @@ app.use(bodyParser.urlencoded({
 const obj= require('./AllPhones')
     
 app.get('/', (req, res) => {
-        res.send("All Phones App")
+    res.send("All Phones App")
     });
 
-app.get('/phones', (req, res) => {
+app.get('/phones', (req, res) => { 
     res.send(obj)
 });
 
