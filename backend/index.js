@@ -22,7 +22,6 @@ app.get('/phones', (req, res) => {
 });
 
 
-
 app.listen(port, err => {
     if (err) {
       throw new Error("There was an error");
