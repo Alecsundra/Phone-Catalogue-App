@@ -30,7 +30,7 @@ const PhoneList = () => {
   return (  
     <div className={error ? 'none':'details'}>
       {id &&
-        <div className="list-card">
+        <div className="list-card-details">
           <div>
               {/* <p>{item.imageFileName}</p> */}
               <img className='img-card'
