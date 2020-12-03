@@ -5,6 +5,7 @@ import './App.css';
 import AppContext from './Context/Provider';
 import Home from './Components/Home/Home';
 import PhoneDetails from './Components/PhoneList/PhoneDetails/PhoneDetails';
+import Navbar from './Components/Navbar/Navbar'
 
 
 const App = () => {
@@ -16,14 +17,20 @@ const App = () => {
         <Route
           exact
           path="/"
-          render={(props) => <Home {...props} />}
+          render={(props) => (
+          <div><Navbar text={"Home"}/>
+          <Home {...props} />
+          </div>)}
         />
         <Route
           exact
-          path="/phones/:phoneId"
-          render={(props) => <PhoneDetails {...props} />}
+          path="/phones/:id"
+          render={(props) => (
+          <div><Navbar text={"Back Home"}/>
+          <PhoneDetails {...props} />
+          </div>)}
         />
-        </Switch> 
+      </Switch> 
 
  </AppContext>
   );
