@@ -1,14 +1,14 @@
-import React, 
-  { useEffect, useState } from 'react';
+import React from 'react';
+import { Link } from 'react-router-dom';
 
-
-const Navbar = () => {
+const Navbar = ({ text }) => {
 
   return (
-   <div> 
-    navbar
+   <div className='navbar'> 
+      <Link to ='/' className='home-navbar'>
+        {text}
+      </Link>
    </div>
-
   );
 }
 

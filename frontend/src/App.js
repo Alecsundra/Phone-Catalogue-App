@@ -1,5 +1,4 @@
-import React, 
-  { useEffect, useState } from 'react';
+import React from 'react';
 import { Switch, Route } from 'react-router-dom';
 import './App.css';
 import AppContext from './Context/Provider';
@@ -10,29 +9,33 @@ import Navbar from './Components/Navbar/Navbar'
 
 const App = () => {
 
-
   return (
     <AppContext>
+
       <Switch>
         <Route
           exact
           path="/"
           render={(props) => (
-          <div><Navbar text={"Home"}/>
-          <Home {...props} />
-          </div>)}
+          <div>
+            <Navbar text={"Home"}/>
+            <Home {...props} />
+          </div>
+          )}
         />
         <Route
           exact
           path="/phones/:id"
           render={(props) => (
-          <div><Navbar text={"Back Home"}/>
-          <PhoneDetails {...props} />
-          </div>)}
+          <div>
+            <Navbar text={"Back Home"}/>
+            <PhoneDetails {...props} />
+          </div>
+          )}
         />
       </Switch> 
 
- </AppContext>
+    </AppContext>
   );
 }
 

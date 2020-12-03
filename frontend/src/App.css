@@ -84,3 +84,23 @@
 .description{
     margin-top: 10vh;
 }
+
+.details-added{
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-gap: 10px;
+}
+.details-text{
+    color:#dd2c00;
+
+}
+
+.details-added > p {
+   font-weight: 600;
+} 
+.dot{
+    height: 25px;
+    width: 25px;
+    border-radius: 50%;
+    display: inline-block;
+}
