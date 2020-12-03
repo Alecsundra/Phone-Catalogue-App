@@ -29,11 +29,10 @@ console.log(phone.name)
 
 
   return (  
-    <div className="list">
-     {phone.id ?
+    <div className="details">
+     {id &&
        <div>
-        <p>{id}</p>
-         <p>{phone.name}</p>
+        <p>{phone.name}</p>
         <p>{phone.manufacturer}</p>
         <p>{phone.description}</p>
         <p>{phone.color}</p>
@@ -43,7 +42,7 @@ console.log(phone.name)
         <p>{phone.ram}</p> 
         {/* <p>{item.imageFileName}</p> */}
         </div>
-        : <Link to= '/'>Go home</Link>}
+     }
     </div>
   );
 }
