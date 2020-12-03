@@ -20,7 +20,11 @@ app.get('/', (req, res) => {
 app.get('/phones', (req, res) => { 
     res.send(obj)
 });
-
+app.get('/phones/:id', (req, res) => {
+  const id = req.params.id 
+  console.log(id); 
+  res.send(obj[id])
+}); 
 
 app.listen(port, err => {
     if (err) {
