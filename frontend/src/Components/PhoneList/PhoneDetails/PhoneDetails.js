@@ -1,7 +1,7 @@
 import React, 
   { useEffect, useState } from 'react';
 import { Context } from '../../../Context/Provider';
-import { useParams } from 'react-router-dom'
+import { useParams,Link } from 'react-router-dom'
 
 const PhoneList = () => {
   const { state, addPhonesList } = React.useContext(Context);
@@ -16,7 +16,10 @@ const PhoneList = () => {
         setPhone(data)
         // setMounted(true)
       })
-  //     // .catch(err=>{console.log(err)})
+      .catch(err=>{
+        console.log(err,'error')
+        alert('Could not find any phone with this id!')
+      })
 
   },[])
 console.log(phone)
@@ -27,6 +30,7 @@ console.log(phone.name)
 
   return (  
     <div className="list">
+     {phone.id ?
        <div>
         <p>{id}</p>
          <p>{phone.name}</p>
@@ -39,7 +43,7 @@ console.log(phone.name)
         <p>{phone.ram}</p> 
         {/* <p>{item.imageFileName}</p> */}
         </div>
-
+        : <Link to= '/'>Go home</Link>}
     </div>
   );
 }
