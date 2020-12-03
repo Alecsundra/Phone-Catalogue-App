@@ -2,7 +2,7 @@ import React,
   { useEffect, useState } from 'react';
 import { Context } from '../../Context/Provider';
 import { Link } from 'react-router-dom';
-// import ph from '../../Utils/img/'
+import { Spinner } from 'reactstrap';
 
 const PhoneList = () => {
 
@@ -25,7 +25,7 @@ const PhoneList = () => {
   return (  
     <div className="list">
       {mounted === false ?
-      'loading' 
+        <Spinner style={{ width: '5rem', height: '5rem',marginTop:'3rem' }} />
       :
       state.phones.map(item =>(
         <div key={item.id} className='list-card'>
