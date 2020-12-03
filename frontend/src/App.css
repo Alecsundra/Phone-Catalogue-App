@@ -1,10 +1,7 @@
-.navbar {
+.navbars {
     border-bottom: solid 2px #dd2c00;
     background-color:rgb(179 178 178 / 19%); 
     height: 7vh;
-    align-items: center;
-    /* background-color: #50556473; */
-    /* background-color: rgb(88 131 119 / 33%); */
     align-items: center;
     display: flex;
     justify-content: flex-end;
@@ -49,14 +46,14 @@
     margin-right:3rem;
 }
 
-.home-navbar{
+.homes-navbar{
     text-decoration: none;
     font-size: 1.5rem;
     margin-right: 2rem;
     color: #3f3f44;
 
 }
-.home-navbar:hover{
+.homes-navbar:hover{
     color:#dd2c00;
 }
 .price{
