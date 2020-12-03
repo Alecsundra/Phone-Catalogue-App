@@ -1,7 +1,9 @@
 import React, 
   { useEffect, useState } from 'react';
 import { Context } from '../../../Context/Provider';
-import { useParams,Link } from 'react-router-dom'
+import { useParams,Link } from 'react-router-dom';
+
+import PhotoCar from './PhotosCar'
 
 const PhoneList = () => {
   const { state, addPhonesList } = React.useContext(Context);
@@ -48,9 +50,10 @@ console.log(phone.name)
         <p><span className='details-text'>Ram:</span> {phone.ram}</p> 
         </div>
         {/* <p>{item.imageFileName}</p> */}
-        </div>
+      </div>
         </div>
      }
+     <PhotoCar />
     </div>
   );
 }
