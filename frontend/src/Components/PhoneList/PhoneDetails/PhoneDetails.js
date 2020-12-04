@@ -1,12 +1,12 @@
 import React, 
   { useEffect, useState } from 'react';
-import { Context } from '../../../Context/Provider';
-import { useParams,Link } from 'react-router-dom';
+// import { Context } from '../../../Context/Provider';
+import { useParams } from 'react-router-dom';
 import { Spinner } from 'reactstrap';
 import PhotoCar from './PhotosCar'
 
 const PhoneList = () => {
-  const { state, addPhonesList } = React.useContext(Context);
+  // const { state, addPhonesList } = React.useContext(Context);
   const [ phone, setPhone]= useState({})
   const { id } = useParams();
   const [error, setError] = useState(false)
@@ -26,7 +26,7 @@ const PhoneList = () => {
         console.log(err,'error')
       })
 
-  },[])
+  },[id])
 // console.log(phone)
 // console.log(phone.name)
 

@@ -22,7 +22,7 @@ app.get('/phones', (req, res) => {
 });
 app.get('/phones/:id', (req, res) => {
   const id = req.params.id 
-  console.log(id); 
+  // console.log(id); 
   res.send(obj[id])
 }); 
 
