@@ -1,3 +1,88 @@
+# Phone Catalogue App
+The project is a simple phone catalogue app build from scratch with [REACT APP](https://github.com/facebook/create-react-app) 
+- [Context, hooks, react-router]
+
+..allowing the user to browse the phones catalog and REST API implemented with [NodeJS](https://nodejs.org/en/docs/)
+
+## Table of contents
+* [General info](#general-info)
+* [Technologies](#technologies)
+* [Setup](#setup)
+
+## General info
+
+### Structure
+
+* src
+    * App.js
+    * Context
+    * Utils
+        * carousel-img
+        * ScrollToTop
+    * Components
+         * FormPhone
+         * Home
+         * Navbar
+         * PhoneList
+
+            * PhoneDetails
+
+
+On homepage you can browse a list of phones. For each of it you have a picture a description and the price. 
+If you want to see more details, you click on the btn that says 'See more details' and it redirects you to the phone id route( with all the info from the api of this specific phone)
+
+For the page to be more interactive, added a reactstrap carousel with phone pictures.
+
+The navbar has only one link, that redirects you on homepage(with diferent text depending on what page you are)
+
+In case that the id phone is not found, the user will recieve a message.
+	
+## Technologies
+Project is created with:
+
+### Frontend
+* "react": "^17.0.1"
+* "react-dom": "^17.0.1"
+* "react-router-dom": "^5.2.0"
+* "reactstrap": "^8.7.1"
+*  "bootstrap": "^4.5.3"
+
+
+### Server
+* node v12.14.1
+* [nodemon](https://www.npmjs.com/package/nodemon)
+* "cors": "^2.8.5"
+* "express": "^4.17.1"
+ 
+	
+## Setup
+To run this project first install it locally.
+Clone a repository using the command line
+and instructions of [GitHub](https://docs.github.com/en/free-pro-team@latest/github/creating-cloning-and-archiving-repositories/cloning-a-repository)
+
+Runs the app in the development mode.\
+Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+```
+$ cd ../frontend
+$ npm install
+$ npm start
+```
+Runs the app in the development mode.\
+Open [http://localhost:8000/phones](http://localhost:3000) to view it in the browser.
+```
+$ cd ../backend
+$ npm install
+$ nodemon index.js
+```
+## Features
+* The awesome pictures are royalty free from [Unsplash](https://unsplash.com/)
+
+## To DO
+* Finish the post route;
+* Getting a better error handling
+* Handle the warnings from the console regarding React StrictMode
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
