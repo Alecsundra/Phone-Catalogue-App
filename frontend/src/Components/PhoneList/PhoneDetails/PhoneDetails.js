@@ -59,7 +59,8 @@ const PhoneList = () => {
         </div>
      }
           <PhotoCar />      
-    </div>}
+    </div>
+    }
       {error && 
         <p style= {{color:'#dd2c00',fontSize:'2rem'}}>
           Could not find any phone with this id!Go back to homepage!
