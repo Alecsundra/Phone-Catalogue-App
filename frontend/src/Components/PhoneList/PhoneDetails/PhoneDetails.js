@@ -32,9 +32,8 @@ const PhoneList = () => {
       {id &&
         <div className="list-card-details">
           <div>
-              {/* <p>{item.imageFileName}</p> */}
               <img className='img-card'
-              src='https://images.unsplash.com/photo-1537589376225-5405c60a5bd8?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=400&q=80' />
+              src={phone.imageFileName} alt={phone.name} />
           </div>
           <div>
             <p className='title'>{phone.name}</p>
@@ -51,6 +50,8 @@ const PhoneList = () => {
         </div>
      }
           <PhotoCar />
+      {error && 'go back home'}
+      
     </div>
   );
 }

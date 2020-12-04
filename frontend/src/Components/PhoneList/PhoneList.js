@@ -30,16 +30,14 @@ const PhoneList = () => {
       state.phones.map(item =>(
         <div key={item.id} className='list-card'>
         <div>
-          <img className='img-card'
-          src='https://images.unsplash.com/photo-1537589376225-5405c60a5bd8?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=400&q=80' />
-       {/* src={`../../Utils/img/${item.imageFileName}`} alt={item.name} />
-       src={item.imageFileName} /> */}
-          </div>
+        <img className='img-card'
+          src={item.imageFileName} alt={item.name} />
+        </div>
           <div>
           <p className='title'>{item.name}</p>
            <p className='price'>{item.price}$</p>
           <p className='description'>{item.description}</p>
-          <Link to={`/phones/${item.id}`}><button className='btn-details'>See more details</button></Link>
+          <Link to={`/${item.id}`}><button className='btn-details'>See more details</button></Link>
           </div>
         </div>
       ))
