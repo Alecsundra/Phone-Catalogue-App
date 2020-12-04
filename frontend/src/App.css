@@ -75,6 +75,8 @@
     justify-content: space-between;
     box-shadow: 5px 10px #8888885c;
     border-bottom: solid 2px #dd2c00;
+    margin: 4rem 2rem 2rem 2rem;
+
 }
 
 .btn-details{
@@ -105,19 +107,17 @@
 .details-added > p {
    font-weight: 600;
 } 
-.dot{
-    height: 25px;
-    width: 25px;
-    border-radius: 50%;
-    display: inline-block;
-}
+
 .details{
     margin-top: 12vh;
 }
 .none{
     display:none
 }
+.phone-form{
+    margin:7rem 7rem 7rem 7rem;
 
+}
 @media only screen and (max-width: 600px) {
     .img-card {
         width: 15rem;

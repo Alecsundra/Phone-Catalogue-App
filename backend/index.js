@@ -26,6 +26,29 @@ app.get('/phones/:id', (req, res) => {
   res.send(obj[id])
 }); 
 
+// app.post('/phones', (req, res) => {
+//   console.log(req.body)
+//   const formData = {
+//     // id: req.body.id,
+//     name: req.body.name ,
+//     manufacturer:req.body.manufacturer,
+//     description: req.body.description,
+//     color: req.body.color,
+//     price:req.body.price,
+//     imageFileName: req.body.imageFileName,
+//     screen:req.body.screen,
+//     processor:req.body.processor,
+//     ram:req.body.ram,
+//   }
+//   connection.query('INSERT INTO phones SET ?', formData, (err) => {
+//     if(err){
+//       res.status(500).send('Error saving your phone')
+//     } else {
+//       res.sendStatus(200)
+//     }
+//   })
+// });
+
 app.listen(port, err => {
     if (err) {
       throw new Error("There was an error");
